@@ -1,6 +1,6 @@
 
-    let word = prompt("단어를 입력하세요.");
-    let array = word.split(""); 
+    const word = prompt("단어를 입력하세요.");
+    const array = word.split(""); 
 
     const chk = array.some(function(item){
         return !isNaN(item);
@@ -9,15 +9,22 @@
     if(chk){
         alert("문자를 입력하시오.");
     } else {
-        let number = Number(prompt("이동할 만큼의 정수를 입력하시오."));
+        const number = Number(prompt("이동할 만큼의 정수를 입력하시오."));
         if(number>=-100 && number<100){
-            let mover = prompt("문자열을 왼쪽으로 이동하려면 L, 오른쪽으로 이동하려면 R을 입력하시오.")
-            if(mover = "R"||"r"){
-                for(i=0; i<array.length; i++){
-                    array[i] = array[array.length-1];
+            const mover = prompt("문자열을 왼쪽으로 이동하려면 L, 오른쪽으로 이동하려면 R을 입력하시오.")
+            if(mover === "R"|| mover ===  "r"){
+                for(i=0; i<number; i++){
+                    array.unshift(array[array.length-1])
+                    array.pop()
                 }
-                
                 alert(array)
+            } else if (mover === "L" || mover === "l") {
+                for (i = 0; i < number; i++) {
+                    array.push(array[0])
+                    array.shift()
+                } alert(array)
+            } else {
+                alert("L 혹은 R을 입력하시오.")
             }
         } else {
             alert("(-100 <= N <100) 의 정수를 입력하시오.")
