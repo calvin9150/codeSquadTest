@@ -14,7 +14,3 @@
 - 코드 가독성에 대해 참고한 강의 ( https://youtu.be/ODFp8fnKnTY?list=PLcqDmjxt30RuMjo2hbuUmc1xzPoEGnLdz&t=466 ) - 좋지않은 코드의 예시를 잘 들어주었다.
 - 나의 경우에는 if문에 다시 if문을 넣는 것을 반복하여 한 눈에 이해하기가 힘들다.
 - 함수를 중심으로 해서 step-1을 다시 코딩 해보았다.
-
-var string = "0,1";
-var array = string.split(",");
-alert(array[0]);
