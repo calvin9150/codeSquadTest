@@ -14,3 +14,7 @@
 - 코드 가독성에 대해 참고한 강의 ( https://youtu.be/ODFp8fnKnTY?list=PLcqDmjxt30RuMjo2hbuUmc1xzPoEGnLdz&t=466 ) - 좋지않은 코드의 예시를 잘 들어주었다.
 - 나의 경우에는 if문에 다시 if문을 넣는 것을 반복하여 한 눈에 이해하기가 힘들다.
 - 함수를 중심으로 해서 step-1을 다시 코딩 해보았다.
+
+step-2
+input으로 받은 명령어를 어떻게 처리해야 하나?
+ㄴ split로 한 글자마다 나누어 배열로 만들고 some으로 명령어에 맞는 배열을 찾는다.
