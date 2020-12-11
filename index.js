@@ -22,14 +22,28 @@ function init() {
         const inputArr = input.split("");
         console.log(inputArr); //
 
-        if (inputArr.includes("U")){
-            (function u() {
-                const row = cube[0]
-                const shiftResult = row.shift();
-                row.push(shiftResult);
-                console.log(cube);
-            })();
+        for (i = 0; i < inputArr.length; i++){
+            if (inputArr[i]==="U"){
+                (function U() {
+                    const row = cube[0]
+                    const shiftResult = row.shift();
+                    row.push(shiftResult);
+                    console.log(cube);
+                    document.getElementById("logs").innerHTML = `U`+`<br>`+`[${cube[0]}]`+`<br>`+`[${cube[1]}]`+`<br>`+`[${cube[2]}]`+`<br>`;
+                })();
+            }
+    
+            if (inputArr[i]==="u"){
+                (function u() {
+                    const row = cube[0]
+                    const popResult = row.pop();
+                    row.unshift(popResult);
+                    console.log(cube);
+                    document.getElementById("logs").innerHTML = `U'`+`<br>`+`[${cube[0]}]`+`<br>`+`[${cube[1]}]`+`<br>`+`[${cube[2]}]`+`<br>`;
+                })();
+            }
         }
+        
     }
         )
 }
