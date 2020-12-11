@@ -8,10 +8,6 @@
 
     const button = document.querySelector('#button');
 
-    function check(arr, search) {
-        return arr.some(row => row.includes(search)); // 배열에서 찾음
-    }
-
     button.addEventListener('click', () => {
         let input = document.querySelector('#input').value;
         input = input.replace(/U'/g, "u");
@@ -107,7 +103,8 @@
 
             else if (inputArr[i] === "Q") {
                 (function Q() {
-                    document.getElementById("logs").innerHTML += 'Bye~';
+                    document.getElementById("manual").remove();
+                    document.getElementById("logs").innerHTML += '<h2>Bye~</h2>';
                     return;
                 })();
             }
