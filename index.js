@@ -14,7 +14,6 @@ function init() {
             return;
         }
         clickButton();
-        console.log(event);
     };
 
     button.addEventListener('click', clickButton
