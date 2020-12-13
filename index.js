@@ -98,13 +98,13 @@ function init() {
                 document.getElementById("manual").remove();
                 document.getElementById("logs").innerHTML += '<h2>Bye~</h2>';
                 return;
-                    }
+            }
+            document.querySelector('#input').value = "";
         })
         
         }
-        document.querySelector('#input').value = "";
+
     
     };
-
 
 init();
