@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function popAndUnshift(wordArr, repeatNumber) {
+        for (let i = 0; i < repeatNumber; i++) {
+            const popResult = wordArr.pop();
+            wordArr.unshift(popResult);
+        }
+        const result = wordArr.join("");
+        alert(result);
+        return result;
+    }
+    
+    popAndUnshift(["a", "b"], 3);
+    popAndUnshift(["a", "b", "c"], 3);
+    popAndUnshift(["a", "b", "c", "d"], 3);
+
+    </script>
+</body>
+</html>
